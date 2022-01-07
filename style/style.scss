@@ -622,8 +622,10 @@ header {
       h2 {
         font-size: 25px;
       }
-      h3 {
-        font-size: 35px;
+      .animated-text {
+        h3 {
+          font-size: 35px;
+        }
       }
     }
   }

@@ -715,7 +715,7 @@ header .navbar .navigation a:hover {
   .main .content h2 {
     font-size: 25px;
   }
-  .main .content h3 {
+  .main .content .animated-text h3 {
     font-size: 35px;
   }
   .about .content {
