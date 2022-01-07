@@ -10,6 +10,10 @@ section {
   padding: 100px;
 }
 
+.sticky {
+  background: crimson;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -19,11 +23,6 @@ header {
   z-index: 999;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
-}
-
-header .sticky {
-  background: crimson;
-  padding: 10px 100px;
 }
 
 header .navbar {
@@ -62,7 +61,7 @@ header .navbar .navigation a {
 }
 
 header .navbar .navigation a:hover {
-  color: crimson;
+  color: #666;
 }
 
 .main {
@@ -657,8 +656,55 @@ header .navbar .navigation a:hover {
     -webkit-transition: 0.4s ease;
     transition: 0.4s ease;
   }
+  header .navbar .menu-btn.active {
+    z-index: 999;
+    background: url(/images/close.png) no-repeat;
+    background-size: 25px;
+    background-position: center;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+    -webkit-filter: invert(1);
+            filter: invert(1);
+  }
   header .navigation {
     display: none;
+  }
+  header .navigation.active {
+    z-index: 888;
+    position: fixed;
+    background: #fff;
+    top: 0;
+    right: 0;
+    width: 380px;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-shadow: 0px 2px 2px rgba(204, 204, 204, 0.51);
+            box-shadow: 0px 2px 2px rgba(204, 204, 204, 0.51);
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+  }
+  header .navigation.active a {
+    color: #000;
+    font-size: 22px;
+    margin: 10px;
+    padding: 0 20px;
+    border-radius: 20px;
+  }
+  header .navigation.active a:hover {
+    background: crimson;
+    color: #fff;
   }
   section {
     padding: 80px 20px;
@@ -701,5 +747,46 @@ header .navbar .navigation a:hover {
   .contact-form {
     padding: 35px 40px;
   }
+}
+
+.scrollToTop-btn {
+  z-index: 999;
+  position: fixed;
+  background: crimson;
+  color: #fff;
+  width: 45px;
+  height: 45px;
+  right: 0;
+  bottom: 10px;
+  font-size: 22px;
+  text-align: center;
+  line-height: 45px;
+  border-radius: 3px;
+  cursor: pointer;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  opacity: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.scrollToTop-btn.active {
+  right: 20px;
+  opacity: 1;
+}
+
+.reveal {
+  position: relative;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  opacity: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.reveal.active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
 }
 /*# sourceMappingURL=style.css.map */
